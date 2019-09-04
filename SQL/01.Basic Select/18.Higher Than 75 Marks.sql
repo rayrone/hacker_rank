@@ -1,0 +1,9 @@
+-- https://www.hackerrank.com/challenges/more-than-75-marks/problem
+
+-- ORACLE SOLUTION
+
+SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY SUBSTR(NAME, LENGTH(NAME) - 2, 3), ID;
+
+-- MS SQL Server SOLUTION
+
+SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY RIGHT(NAME, 3), ID;
